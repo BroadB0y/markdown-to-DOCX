@@ -1,45 +1,38 @@
 # Markdown to DOCX Converter
 
-This Python script converts Markdown files to Microsoft Word (DOCX) format while preserving basic formatting elements like headings, lists, and tables.
+A Python script that converts Markdown files to Microsoft Word (.docx) format while preserving headings, paragraphs, lists, and tables.
+
+## Features
+
+- Supports headings (h1-h6)
+- Converts paragraphs, bullet lists, and numbered lists
+- Handles tables with proper formatting
+- Preserves basic text formatting from Markdown
+- Automatic output filename generation (same as input but with .docx extension)
 
 ## Requirements
 
 - Python 3.x
-- Required Python packages:
+- Required packages:
   - `markdown`
   - `python-docx`
   - `beautifulsoup4`
 
 ## Installation
 
-1. Install the required packages using pip:
-
-```bash
-pip install markdown python-docx beautifulsoup4
-```
-
-2. Clone or download this repository
+1. Install the required packages:
+   ```bash
+   pip install markdown python-docx beautifulsoup4
+   ```
 
 ## Usage
 
-1. Prepare your Markdown file
-2. Run the script and follow the instructions:
-
+Run the script and provide the input Markdown filename when prompted:
 ```bash
 python main.py
 ```
 
-3. The script will generate a Word document.
-
-
-
-## Supported Markdown Elements
-
-- Headers (`#`, `##`, `###`)
-- Paragraphs
-- Unordered lists (`-` or `*`)
-- Ordered lists (numbered items)
-- Tables
-- Basic text formatting (bold, italic, etc.)
-
-
+The script will:
+1. Ask for input filename (e.g., `document.md`)
+2. Generate a Word document with the same base name (e.g., `document.docx`)
+3. Save it in the same directory.
