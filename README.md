@@ -22,23 +22,16 @@ pip install markdown python-docx beautifulsoup4
 
 ## Usage
 
-1. Prepare your Markdown file (default input filename is `input.md`)
-2. Run the script:
+1. Prepare your Markdown file
+2. Run the script and follow the instructions:
 
 ```bash
 python main.py
 ```
 
-3. The script will generate a Word document named `output.docx`
+3. The script will generate a Word document.
 
-### Custom File Names
 
-You can modify the input and output file names by editing these lines in the script:
-
-```python
-input_md = "input.md"    # Your Markdown file
-output_docx = "output.docx"  # Output DOCX filename
-```
 
 ## Supported Markdown Elements
 
