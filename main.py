@@ -1,6 +1,7 @@
 import markdown
 from docx import Document
 from bs4 import BeautifulSoup
+import os
 
 def markdown_to_docx(input_file, output_file):
     try:
@@ -47,14 +48,15 @@ def markdown_to_docx(input_file, output_file):
                         table.rows[i].cells[j].text = cell.text.strip()
 
         doc.save(output_file)
-        print(f"Saved as {output_file}")
+        print(f"Файл успешно сохранён как {output_file}")
 
     except Exception as e:
-        print(f"Error: {str(e)}")
+        print(f"Ошибка: {str(e)}")
 
 if __name__ == "__main__":
-    # Your input and output file paths
-    input_md = "input.md"  # Your input Markdown file
-    output_docx = "output.docx"  # Your output DOCX file
+    input_md = input("Введите имя входного Markdown файла (например: document.md): ")
+    
+    base_name = os.path.splitext(input_md)[0]
+    output_docx = f"{base_name}.docx"
     
     markdown_to_docx(input_md, output_docx)
